@@ -1,7 +1,7 @@
 from crewai.tools import BaseTool
 from typing import Type
 from pydantic import BaseModel, Field
-# import arxiv
+import arxiv
 
 class ArxivSearcherInput(BaseModel):
     """Input schema for ArxivSearcher."""
@@ -31,7 +31,7 @@ class ArxivSearcherTool(BaseTool):
             >>> results = search_arxiv("attention is all you need")
             >>> print(results)
         """
-        import arxiv
+        # import arxiv
         # # Normalize the query, removing operator keywords
         # query = re.sub(r"[^\s\w]", " ", query.lower())
         # query = re.sub(r"\s(and|or|not)\s", " ", " " + query + " ")
